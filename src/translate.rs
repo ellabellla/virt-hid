@@ -4,7 +4,7 @@ use serde::{Serialize, Deserialize};
 
 
 #[derive(Debug, Clone, Copy, PartialEq, Serialize, Deserialize, IntoPrimitive, FromPrimitive)]
-#[repr(usize)]
+#[repr(u32)]
 /// Modifier Keys
 pub enum Modifier {
     /// Left Control
@@ -53,7 +53,7 @@ impl Modifier {
 
 //^(\d+) ([A-Z0-9]+) (Keyboard|Keypad|Misc) (.*?)$
 #[derive(Debug, Eq, Hash, PartialEq, Clone, Copy, Serialize, Deserialize, IntoPrimitive, FromPrimitive)]
-#[repr(usize)]
+#[repr(u32)]
 /// Key press origin
 pub enum KeyOrigin {
     /// Keyboard
@@ -66,7 +66,7 @@ pub enum KeyOrigin {
 }
 
 #[derive(Debug, Eq, Hash, PartialEq, Clone, Copy, Serialize, Deserialize, IntoPrimitive, FromPrimitive)]
-#[repr(usize)]
+#[repr(u32)]
 /// Special Key
 pub enum SpecialKey {
  ///   ReturnEnter

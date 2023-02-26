@@ -7,7 +7,7 @@ use serde::{Serialize, Deserialize};
 use crate::HID;
 
 #[derive(Debug, Clone, Serialize, Deserialize, IntoPrimitive, FromPrimitive)]
-#[repr(usize)]
+#[repr(u32)]
 /// Mouse Button
 pub enum MouseButton {
  ///   Left
@@ -31,7 +31,7 @@ impl MouseButton {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, IntoPrimitive, FromPrimitive)]
-#[repr(usize)]
+#[repr(u32)]
 /// Mouse movement direction
 pub enum MouseDir {
     /// X
